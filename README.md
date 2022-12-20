@@ -1,6 +1,7 @@
 # Look at the Neighbor: Distortion-aware Unsupervised Domain Adaptation for Panoramic Semantic Segmentation
 
-![DATR_cover (1).pdf](https://github.com/zhengxuJosh/DATR/files/10266560/DATR_cover.1.pdf"Title")
+![DATR_cover](https://user-images.githubusercontent.com/49426295/208617629-82bd1407-94f3-4432-8fee-2d980c5910e7.jpg)
+
 
 This repository contains the source code of **DATR** from the paper [Look at the Neighbor: Distortion-aware Unsupervised Domain Adaptation for Panoramic Semantic Segmentation]().
 
