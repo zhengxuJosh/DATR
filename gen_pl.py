@@ -9,12 +9,12 @@ from dataset.densepass_train_dataset import densepassDataSet
 from dataset.adaption.dp13_dataset import densepass13DataSet
 from models.segformer.segformer import Seg
 model1 = Seg(backbone='mit_nat_b2',num_classes=13,embedding_dim=512,pretrained=False)
-model_path = '/hpc/users/CONNECT/xuzheng/omni_seg/code/models/ptmodel/b2_best_densepass.pth'
+model_path = '/models/ptmodel/b2_best_densepass.pth'
 model1.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")),strict=False)
 device = 'cuda'
 model1.to(device)
-train_root = '/hpc/users/CONNECT/xuzheng/omni_seg'
-train_DensePASS = densepass13DataSet(train_root, list_path='/hpc/users/CONNECT/xuzheng/Trans4PASS/adaptations/dataset/densepass_list/train.txt',crop_size=(2048, 400))
+train_root = './'
+train_DensePASS = densepass13DataSet(train_root, list_path='/adaptations/dataset/densepass_list/train.txt',crop_size=(2048, 400))
 train_loader = data.DataLoader(train_DensePASS, batch_size=1, shuffle=False, pin_memory=True)
 
 interp = nn.Upsample(size=(400, 2048), mode='bilinear', align_corners=True)
@@ -67,7 +67,7 @@ for index in range(len(train_DensePASS)):
     output = np.asarray(label, dtype=np.uint8)
     output = Image.fromarray(output)
     name = name.replace('.jpg', '_labelTrainIds.png')
-    save_path = '/hpc/users/CONNECT/xuzheng/omni_seg/code/syn_pl'
+    save_path = '/syn_pl'
     save_fn = os.path.join(save_path, name)
     if not os.path.exists(os.path.dirname(save_fn)):
         os.makedirs(os.path.dirname(save_fn), exist_ok=True)
