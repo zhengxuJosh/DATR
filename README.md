@@ -1,4 +1,4 @@
-#### Look at the Neighbor: Distortion-aware Unsupervised Domain Adaptation for Panoramic Semantic Segmentation, ICCV 2023 [pdf]()
+#### Look at the Neighbor: Distortion-aware Unsupervised Domain Adaptation for Panoramic Semantic Segmentation, ICCV 2023 [[pdf]]()
 
 ![DATR_cover](https://user-images.githubusercontent.com/49426295/208617629-82bd1407-94f3-4432-8fee-2d980c5910e7.jpg)
 
